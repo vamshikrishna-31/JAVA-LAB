@@ -1,1 +1,28 @@
+import java.util.Scanner;
+class Lab5p1{
+	public static void main(String[] args){
+	Scanner s=new Scanner(System.in);
+	try{
+		System.out.println("enter age:");
+		int age=s.nextInt();
+		if(age<18)
+			throw new Age("sorry");
+		else
+			System.out.println("caste your vote");
+	}
 
+	catch(Age ae){
+	System.out.println(ae.getMessage());
+	}
+
+	}
+
+}
+//user defined exceptions
+class Age extends java.lang.Exception{
+
+        public Age(String msg){
+	super(msg);
+	}
+
+}
